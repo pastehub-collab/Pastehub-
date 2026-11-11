@@ -1,0 +1,837 @@
+/* =========================================================
+   PASTEHUB — MODERN DARK PHONE-FIRST UI
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: #0f172a;
+    color: #e5e7eb;
+    padding: 16px 10px;
+}
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.container {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+
+    padding: 28px;
+    background: #162235;
+
+    border: 1px solid #26364d;
+    border-radius: 18px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .35);
+}
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+h1 {
+    color: #f8fafc;
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+h2 {
+    color: #f8fafc;
+    font-size: 22px;
+    margin: 28px 0 13px;
+}
+
+h3 {
+    color: #f8fafc;
+    font-size: 18px;
+}
+
+p {
+    color: #cbd5e1;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #93c5fd;
+}
+
+/* =========================================================
+   HOME HEADER
+========================================================= */
+
+.home-header {
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.home-header h1 {
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+/* =========================================================
+   QUICK ACTIONS
+========================================================= */
+
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+    margin-bottom: 30px;
+}
+
+.action-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-height: 72px;
+    padding: 15px;
+
+    background: #263449;
+    border: 1px solid #334155;
+    border-radius: 13px;
+
+    color: #fff;
+    text-decoration: none;
+
+    transition: .15s ease;
+}
+
+.action-card:hover {
+    background: #2d3c52;
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+.action-icon {
+    flex-shrink: 0;
+    font-size: 25px;
+}
+
+.action-card strong {
+    display: block;
+    color: #f8fafc;
+    font-size: 16px;
+}
+
+.action-card small {
+    display: block;
+    margin-top: 4px;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* =========================================================
+   HOME SECTIONS
+========================================================= */
+
+.home-section {
+    margin-top: 30px;
+}
+
+.section-header {
+    margin-bottom: 13px;
+}
+
+.section-header h2 {
+    margin: 0;
+}
+
+.section-header p {
+    margin-top: 5px;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* =========================================================
+   FOLDER LIST
+========================================================= */
+
+.folder-list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.folder-card {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 70px;
+
+    background: #263449;
+    border: 1px solid #334155;
+    border-radius: 13px;
+
+    overflow: visible;
+    transition: .15s ease;
+}
+
+.folder-card:hover {
+    background: #2d3c52;
+}
+
+.folder-main {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 15px;
+
+    color: #fff;
+    text-decoration: none;
+}
+
+.folder-main:hover {
+    text-decoration: none;
+}
+
+.folder-icon {
+    flex-shrink: 0;
+    font-size: 27px;
+}
+
+.folder-info {
+    min-width: 0;
+}
+
+.folder-info strong {
+    display: block;
+
+    color: #60a5fa;
+    font-size: 16px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.folder-info span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.folder-arrow {
+    margin-left: auto;
+    color: #64748b;
+    font-size: 22px;
+}
+
+/* =========================================================
+   PASTE LIST
+========================================================= */
+
+.paste-list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.paste-card {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 75px;
+
+    background: #263449;
+    border: 1px solid #334155;
+    border-radius: 13px;
+
+    transition: .15s ease;
+}
+
+.paste-card:hover {
+    background: #2d3c52;
+}
+
+.paste-main {
+    flex: 1;
+    min-width: 0;
+
+    padding: 16px;
+
+    color: #fff;
+    text-decoration: none;
+}
+
+.paste-main:hover {
+    text-decoration: none;
+}
+
+.paste-title {
+    display: block;
+
+    color: #60a5fa;
+    font-size: 16px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.paste-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 7px;
+
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* =========================================================
+   THREE DOT MENU
+========================================================= */
+
+.card-menu {
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 9px;
+}
+
+.menu-button {
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 9px;
+
+    background: transparent;
+    color: #94a3b8;
+
+    font-size: 25px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.menu-button:hover {
+    background: #334155;
+    color: #fff;
+    transform: none;
+}
+
+.menu-dropdown {
+    display: none;
+
+    position: absolute;
+    right: 0;
+    top: 48px;
+
+    min-width: 155px;
+
+    z-index: 100;
+
+    padding: 6px;
+
+    background: #172235;
+    border: 1px solid #3b4a60;
+    border-radius: 11px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .5);
+}
+
+.menu-dropdown.show {
+    display: block;
+}
+
+.menu-dropdown a {
+    display: block;
+
+    padding: 11px 12px;
+
+    border-radius: 8px;
+
+    color: #e5e7eb;
+    font-size: 14px;
+}
+
+.menu-dropdown a:hover {
+    background: #263449;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty-state {
+    text-align: center;
+
+    padding: 35px 18px;
+
+    background: #263449;
+    border: 1px solid #334155;
+    border-radius: 13px;
+}
+
+.empty-icon {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.empty-state strong {
+    display: block;
+    color: #f8fafc;
+    font-size: 16px;
+}
+
+.empty-state p {
+    margin-top: 6px;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* =========================================================
+   NORMAL BUTTONS
+========================================================= */
+
+button {
+    min-height: 44px;
+
+    padding: 10px 16px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #3b82f6;
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: .15s ease;
+}
+
+button:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* =========================================================
+   FORMS
+========================================================= */
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 15px 16px;
+
+    margin-top: 9px;
+    margin-bottom: 18px;
+
+    border: 1px solid #3b4a60;
+    border-radius: 10px;
+
+    background: #202d40;
+    color: #f8fafc;
+
+    outline: none;
+
+    font-size: 16px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 2px rgba(96, 165, 250, .12);
+}
+
+textarea {
+    min-height: 420px;
+    resize: vertical;
+    line-height: 1.55;
+}
+
+select {
+    cursor: pointer;
+}
+
+/* =========================================================
+   PASTE VIEW
+========================================================= */
+
+pre {
+    width: 100%;
+
+    padding: 18px;
+    margin: 18px 0;
+
+    background: #111c2d;
+    border: 1px solid #334155;
+    border-radius: 10px;
+
+    color: #e5e7eb;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: auto;
+}
+
+/* =========================================================
+   MOBILE — BIG & COMFORTABLE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px 7px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+
+        padding: 21px 15px;
+
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: 29px;
+        margin-bottom: 22px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    /* Quick actions */
+
+    .quick-actions {
+        gap: 10px;
+    }
+
+    .action-card {
+        min-height: 78px;
+        padding: 14px 11px;
+        gap: 9px;
+    }
+
+    .action-icon {
+        font-size: 24px;
+    }
+
+    .action-card strong {
+        font-size: 14px;
+    }
+
+    .action-card small {
+        font-size: 10px;
+    }
+
+    /* Cards */
+
+    .folder-card {
+        min-height: 72px;
+    }
+
+    .paste-card {
+        min-height: 78px;
+    }
+
+    .folder-main {
+        padding: 15px 12px;
+    }
+
+    .paste-main {
+        padding: 16px 12px;
+    }
+
+    .folder-icon {
+        font-size: 25px;
+    }
+
+    .folder-info strong,
+    .paste-title {
+        font-size: 16px;
+    }
+
+    .folder-info span,
+    .paste-meta {
+        font-size: 12px;
+    }
+
+    /* Menu */
+
+    .menu-button {
+        width: 44px;
+        height: 44px;
+        font-size: 26px;
+    }
+
+    .menu-dropdown {
+        top: 50px;
+        min-width: 165px;
+    }
+
+    .menu-dropdown a {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* Forms */
+
+    input,
+    textarea,
+    select {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    textarea {
+        min-height: 430px;
+    }
+
+    button {
+        width: 100%;
+        min-height: 48px;
+        font-size: 15px;
+    }
+}
+
+.top-navbar{
+
+    margin:-21px -15px 24px;
+    padding:14px 15px;
+}
+
+.nav-title{
+
+    font-size:24px;
+}
+
+.hero h1{
+
+    font-size:32px;
+}
+
+.hero p{
+
+    font-size:15px;
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    body {
+        padding: 7px 5px;
+    }
+
+    .container {
+        padding: 18px 12px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .action-card {
+        min-height: 64px;
+    }
+}
+
+/* =========================================================
+   TOP HEADER MENU
+========================================================= */
+
+.home-header{
+    position:relative;
+    text-align:center;
+    margin-bottom:28px;
+}
+
+.header-menu{
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+.header-menu .menu-button{
+    width:42px;
+    height:42px;
+    background:transparent;
+    border:none;
+    color:#94a3b8;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.header-menu .menu-button:hover{
+    background:#334155;
+    border-radius:10px;
+    color:#fff;
+}
+
+#topMenu{
+    display:none;
+    position:absolute;
+    right:0;
+    top:48px;
+    width:200px;
+    background:#172235;
+    border:1px solid #334155;
+    border-radius:12px;
+    overflow:hidden;
+    z-index:999;
+    box-shadow:0 10px 30px rgba(0,0,0,.45);
+}
+
+#topMenu.show{
+    display:block;
+}
+
+#topMenu a{
+    display:block;
+    padding:14px 16px;
+    color:#e5e7eb;
+    text-decoration:none;
+}
+
+#topMenu a:hover{
+    background:#263449;
+}
+
+/* ===========================
+   TOP NAVBAR
+=========================== */
+
+.top-navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:14px 18px;
+
+    margin:-28px -28px 28px;
+
+    background:#101826;
+
+    border-bottom:1px solid #26364d;
+}
+
+.nav-left{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.nav-logo{
+    font-size:28px;
+}
+
+.nav-title{
+
+    color:white;
+
+    font-size:26px;
+    font-weight:700;
+}
+
+.nav-right{
+
+    position:relative;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.hero h1{
+
+    color:white;
+    font-size:40px;
+    margin-bottom:8px;
+}
+
+.hero p{
+
+    color:#94a3b8;
+    font-size:17px;
+  }
+  
